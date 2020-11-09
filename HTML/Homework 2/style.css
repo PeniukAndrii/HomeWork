@@ -1,0 +1,79 @@
+body{
+    background-color: rgba(190, 126, 61, 0.7);
+    margin: 0;
+    padding: 0;
+}
+.top{
+    margin: 3px;
+    margin-top: 6px ;
+    background-color: rgba(102, 0, 245, 0.4);
+    display: inline-block;
+    border: 3px solid white;
+    border-radius: 5%;
+    font-family: "Sitka Banner";
+    font-size: 40px;
+    padding: 15px;
+    text-shadow: 1px 1px 2px white;
+    margin-left: 600px;
+}
+.img-top{
+    border-radius: 5%;
+    float:right;
+    margin: 5px;
+    display: inline-block;
+    height: 400px;
+    border: 1px solid white;
+}
+.text{
+    font-size: 15px;
+    font-family:Arial;
+
+
+}
+.h2c{
+    font-family: "Sitka Banner";
+    display: inline-block;
+    margin: 1px;
+    background-color: rgba(139, 65, 245, 0.4);
+    border: 2px solid white;
+    border-radius: 15%;
+    padding: 5px;
+    text-shadow: 1px 1px 2px white;
+    margin-left: 650px;
+}
+.h2cc{
+    font-family: "Sitka Banner";
+    display: inline-block;
+    margin: 1px;
+    background-color: rgba(139, 65, 245, 0.4);
+    border: 2px solid white;
+    border-radius: 15%;
+    padding: 5px;
+    text-shadow: 1px 1px 2px white;
+    margin-left: 740px;
+}
+table{
+    background-color: rgb(255, 158, 0.5);
+    font-family: Arial;
+    display: inline-block;
+}
+/*
+p{
+    font-weight: bold;
+    font-family: Arial;
+
+}
+ol{
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 15px;
+    display: inline-block;
+}
+*/
+.end{
+    font-family: Arial;
+    font-weight: bold;
+    display: inline-block;
+    margin: 0;
+
+}

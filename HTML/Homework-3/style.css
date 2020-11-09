@@ -1,0 +1,46 @@
+* {
+
+    box-sizing: border-box;
+}
+.black-block{
+    width: 1000px;
+    min-height: 500px;
+    background-color: black;
+    border: 3px solid black;
+}
+.orange-block{
+    width: 100%;
+    background-color: orange;
+    height: 100px;
+}
+.red-block {
+    width: 25%;
+    height: 300px;
+    background-color: red;
+    float: left;
+}
+.green-block {
+    width: 25%;
+    height: 300px;
+    background-color: green;
+    float: left;
+}
+.blue-block{
+    width: 25%;
+    height: 300px;
+    background-color: blue;
+    float: left;
+}
+.back-block-inside{
+    width: 25%;
+    height: 300px;
+    background-color: #fff;
+    float: left;
+}
+.orange-block2{
+    width: 100%;
+    height: 100px;
+    background-color: orange;
+    clear:both;
+}
+

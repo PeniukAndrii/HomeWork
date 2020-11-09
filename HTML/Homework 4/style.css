@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 5px;
+}
+.main {
+    background-color: black;
+    border: 2px solid black;
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.style-block{
+    width: 25%;
+    height: 300px;
+}
+.o{
+    background-color: orange;
+    width: 100%;
+    height: 100px;
+}
+.red{
+    background-color: red;
+}
+.green{
+    background: green;
+}
+.blue{
+    background-color: #009bee;
+}
+.black{
+    background-color: darkgray;
+}
+
