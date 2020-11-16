@@ -88,22 +88,25 @@ lift.addEventListener('mouseleave', (ev)=>{
     menu.style.display='block'
 })*/
 
-/* 8-11 Завданяя Мікро костиль
+/* 8-11 Завдання Не впевнений в правильності
 let comment=[{title : 'lorem', body:'body1'},
-    {title : 'lorerrrrm', body:'body2'},
-    {title : 'lorerw12312m', body:'body3'},
+    {title : 'lorem', body:'body2'},
+    {title : 'lorem2312m', body:'body3'},
 ];
 let wrapper=document.createElement("div")
 document.body.appendChild(wrapper);
 let inp=document.createElement("input");
 let inp2=document.createElement("input");
 let inp3=document.createElement("input");
+let inp4=document.createElement("input");
 inp.setAttribute('type', 'button')
 inp.setAttribute('value', 'Скрити Боди 1')
 inp2.setAttribute('type', 'button')
 inp2.setAttribute('value', 'Скрити Боди 2')
 inp3.setAttribute('type', 'button')
 inp3.setAttribute('value', 'Скрити Боди 3')
+inp4.setAttribute('type', 'button')
+inp4.setAttribute('value', 'Вернути Закриті Боді')
 for (let i=0;i<comment.length;i++){
     let titles=document.createElement('div');
     let bodys=document.createElement('div');
@@ -113,10 +116,10 @@ for (let i=0;i<comment.length;i++){
     elem.appendChild(bodys)
     titles.innerText=comment[i].title
     bodys.innerText=comment[i].body
-    bodys.setAttribute(`kek${i}`,'fa')
+    bodys.setAttribute(`kek${i}`,'')
     inp.addEventListener('click',(ev)=>{
         if(bodys.hasAttribute('kek0')){
-           bodys.style.display='none'
+            bodys.style.display='none'
         }
     });
     inp2.addEventListener('click',(ev)=>{
@@ -129,10 +132,16 @@ for (let i=0;i<comment.length;i++){
             bodys.style.display='none'
         }
     })
+    inp4.addEventListener('click',(ev)=>{
+        if(bodys.style.display==='none'){
+            bodys.style.display='block'
+        }
+    })
 }
 wrapper.appendChild(inp)
 wrapper.appendChild(inp2)
-wrapper.appendChild(inp3)*/
+wrapper.appendChild(inp3)
+wrapper.appendChild(inp4)*/
 
 /* 12-15 Завдання
 let wrapper=document.createElement("div")
@@ -352,6 +361,30 @@ button.addEventListener('click',(ev)=>{
     }
 })
 */
+
+/* 45-46 Завдання
+let arrH2=document.getElementsByTagName('h2');
+let cont=document.getElementById('content');
+let wrap=document.getElementById('wrap');
+let ul=document.createElement('ul');
+
+for (let i = 0; i < arrH2.length; i++) {
+    let li=document.createElement('li');
+    let a=document.createElement('a');
+    let yakor='yakor'+i
+    a.href='#'+yakor;
+    arrH2[i].setAttribute('id',yakor);
+    a.innerHTML=arrH2[i].innerText;
+    li.appendChild(a)
+    ul.appendChild(li);
+}
+cont.appendChild(ul);
+cont.style.width='40%';
+wrap.style.width='40%';
+cont.style.float='right'*/
+
+
+
 
 
 
