@@ -363,36 +363,121 @@ button.addEventListener('click',(ev)=>{
 */
 
 /* 45-46 Завдання
-let arrH2=document.getElementsByTagName('h2');
-let cont=document.getElementById('content');
+let H2=document.getElementsByTagName('h2');
 let wrap=document.getElementById('wrap');
-let ul=document.createElement('ul');
+let contents=document.getElementById('content');
+let block=document.createElement('div');
 
-for (let i = 0; i < arrH2.length; i++) {
-    let li=document.createElement('li');
-    let a=document.createElement('a');
-    let yakor='yakor'+i
-    a.href='#'+yakor;
-    arrH2[i].setAttribute('id',yakor);
-    a.innerHTML=arrH2[i].innerText;
-    li.appendChild(a)
-    ul.appendChild(li);
+for(let i=0; i<H2.length;i++){
+    let divs=document.createElement('div')
+    let a=document.createElement('a')
+    a.setAttribute('href',`#${[i]}`);
+    contents.appendChild(divs)
+    a.innerHTML=H2[i].innerText
+    divs.appendChild(a)
+    H2[i].setAttribute('id',`${[i]}`)
 }
-cont.appendChild(ul);
-cont.style.width='40%';
-wrap.style.width='40%';
-cont.style.float='right'*/
+contents.style.float='right'
+*/
+
+/* 48-66 Завдання
+let usersWithAddress = [
+    {id:1,name: 'vasya', age: 31, status: false, address: {city: 'Lviv', street: 'Shevchenko', number: 16}},
+    {id:2,name: 'petya', age: 30, status: true, address: {city: 'Kyiv', street: 'Shevchenko', number: 1}},
+    {id:3,name: 'kolya', age: 29, status: true, address: {city: 'Lviv', street: 'Shevchenko', number: 121}},
+    {id:4,name: 'olya', age: 28, status: false, address: {city: 'Ternopil', street: 'Shevchenko', number: 90}},
+    {id:5,name: 'max', age: 30, status: true, address: {city: 'Lviv', street: 'Shevchenko', number: 115}},
+    {id:6,name: 'anya', age: 31, status: false, address: {city: 'Kyiv', street: 'Shevchenko', number: 2}},
+    {id:7,name: 'oleg', age: 28, status: false, address: {city: 'Ternopil', street: 'Shevchenko', number: 22}},
+    {id:8,name: 'andrey', age: 29, status: true, address: {city: 'Lviv', street: 'Shevchenko', number: 43}},
+    {id:9,name: 'masha', age: 30, status: true, address: {city: 'Kyiv', street: 'Shevchenko', number: 12}},
+    {id:10,name: 'olya', age: 31, status: false, address: {city: 'Lviv', street: 'Shevchenko', number: 16}},
+    {id:11,name: 'max', age: 31, status: true, address: {city: 'Ternopil', street: 'Shevchenko', number: 121}}
+];
+
+let wrapper=document.createElement('div');
+let form=document.createElement('form');
+let input=document.createElement('input');
+let input2=document.createElement('input');
+let input3=document.createElement('input');
+let input4=document.createElement('input');
+document.body.appendChild(form);
+form.appendChild(input);
+form.appendChild(input2);
+form.appendChild(input3);
+form.appendChild(input4);
+input.setAttribute('type','checkbox');
+input2.setAttribute('type','checkbox');
+input3.setAttribute('type','checkbox');
+input4.setAttribute('type','button');x
+input4.setAttribute('value','Filter this');
+input4.style='width : 100px; margin-left: 10px '
 
 
+input4.addEventListener('click',(ev)=>{
+    if (input.checked){
+        usersWithAddress.filter((value)=>{
+            if(value.status===false){
+                let stat=document.createElement('p');
+                stat.innerText=${value.id} ${value.name} ${value.age} ${value.status}  ${value.address.city} ${value.address.street} ${value.address.nu}
+                    wrapper.appendChild(stat);
+            }
+        })
+    }
+    if (input2.checked) {
+        usersWithAddress.filter((value)=>{
+            if(value.age>=29){
+                let stat=document.createElement('p');
+                stat.innerText=${value.id} ${value.name} ${value.age} ${value.status}  ${value.address.city} ${value.address.street} ${value.address.nu}
+                    wrapper.appendChild(stat);
+            }
+        })
+    }
+    if (input3.checked) {
+        usersWithAddress.filter((value)=>{
+            if(value.address.city==='Kyiv'){
+                let stat=document.createElement('p');
+                stat.innerText=${value.id} ${value.name} ${value.age} ${value.status}  ${value.address.city} ${value.address.street} ${value.address.nu}
+                    wrapper.appendChild(stat);
+            }
+        })
+    }
+})
+document.body.appendChild(wrapper);*/
+
+/* ------------------ не зробив ше
+let H2=document.getElementsByTagName('h2')
+let divs=document.getElementsByTagName('div')
+let p=document.getElementsByTagName('p')
+let H1=document.getElementsByTagName('h1')
 
 
+let form=document.createElement('form');
+let but1=document.createElement('input');
+let but2=document.createElement('input');
+but1.setAttribute('type','button');
+but2.setAttribute('type','button');
+document.body.appendChild(form)
+form.appendChild(but1)
+form.appendChild(but2)
+
+function func(elem1){
+    but2.onclick = (ev) => {
+        console.log(elem1.children)
+    }
 
 
+}
+func(divs)*/
 
 
-
-
-
+/* ШЕ НЕ ЗРОБИВ
+let p=document.getElementsByTagName('p');
+for(let i of p){
+    i.onmouseup=function () {
+        window.getSelection().toString()
+    }
+}*/
 
 
 
