@@ -105,16 +105,19 @@ btn4.addEventListener('click',()=>{
     textArea.value=localStorage.getItem(`${i++}`)
 })*/
 
+/* 14-18 Завдання
 let wrap=document.createElement('div')
-document.body.appendChild(wrap)
 let btn=document.createElement('button')
+let btn5=document.createElement('button')
+let btn2=document.createElement('button')
+document.body.appendChild(wrap)
 document.body.appendChild(btn)
+document.body.appendChild(btn5)
 btn.innerText='Clear Local'
-
+btn5.innerText='removeContanct'
 btn.addEventListener("click", ()=>{
     localStorage.clear()
 })
-let btn2=document.createElement('button')
 document.body.appendChild(btn2)
 btn2.innerText='Створити контакт'
 let P=[]
@@ -136,15 +139,16 @@ P[5].innerText='День рождения'
 
 let i=0;
 btn2.addEventListener("click", ()=>{
-    i++
-    localStorage.setItem(`${i}`,`${JSON.stringify({name:inp[0].value,
-        num:inp[1].value,
-        email:inp[2].value,
-        firm:inp[3].value,
-        depart:inp[4].value,
-        birthday:inp[5].value,
-    })}`)
+    localStorage.setItem(`${i++}`,`${JSON.stringify([
+        inp[0].value,
+        inp[1].value,
+        inp[2].value,
+        inp[3].value,
+        inp[4].value,
+        inp[5].value,
+    ])}`)
 })
+
 let btn3=document.createElement('button')
 let btn4=document.createElement('button')
 btn3.innerText='Prev'
@@ -152,53 +156,31 @@ btn4.innerText='Next'
 document.body.appendChild(btn3)
 document.body.appendChild(btn4)
 
+let kek;
+for(let h=0; h<6; h++){
+    kek=JSON.parse(localStorage.getItem(`${i}`))
+    inp[h].value=kek[h]
+}
 btn3.addEventListener('click',()=>{
-
+    i--
+    for(let j=0; j<6; j++){
+        kek=JSON.parse(localStorage.getItem(`${i}`))
+        inp[j].value=kek[j]
+    }
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+btn4.addEventListener('click',()=>{
+    i++
+    for(let j=0; j<6; j++){
+        kek=JSON.parse(localStorage.getItem(`${i}`))
+        inp[j].value=kek[j]
+    }
+})
+btn5.addEventListener('click',()=>{
+    localStorage.removeItem(`${i}`)
+    i++
+    for(let k=0; k<6; k++){
+        kek=JSON.parse(localStorage.getItem(`${i}`))
+        inp[k].value=kek[k]
+    }
+})
+*/
